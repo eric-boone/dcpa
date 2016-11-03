@@ -1,0 +1,259 @@
+/*= svg map css : 
+ *            only applicable for svg rendering; 
+ *            not applicable for general style (html)
+ *****************/ 
+text
+{
+	pointer-events: none;
+	font-family: sans-serif;
+	font-size: 9pt;
+	stroke: none;
+	text-anchor: middle;
+}
+
+.order  
+{
+	fill: #000000;
+	color:#000000;
+}
+
+.offer
+{
+    fill: #FF0000;
+    color:#FF0000;
+}
+                
+text
+{
+	pointer-events: none;
+	font-family: sans-serif;
+	font-size: 9pt;
+	stroke: none;
+	text-anchor: middle;
+}
+
+.order  
+{
+	fill: #000000;
+	color:#000000;
+}
+
+.offer
+{
+    fill: #FF0000;
+    color:#FF0000;
+}
+
+.territory:hover{
+	fill: #22aa44;
+}
+		        
+.stroke_
+{
+	stroke: none;   
+}
+.text
+{
+    font-family: sans-serif;
+    font-size: 8pt;
+    pointer-events: none;
+    stroke: none;
+}
+.smalltext
+{
+    font-family: sans-serif;
+    font-size: 6pt;
+    pointer-events: none;
+    stroke: none;
+}
+.largetext
+{
+    font-family: sans-serif;
+    font-size: 14pt;
+    pointer-events: none;
+    stroke: none;
+}
+.mapsymbol
+{
+    font-family: sans-serif;
+    font-size: 14pt;
+    pointer-events: none;
+    stroke: none;
+}
+.picker
+{
+    fill: green;
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: 1;
+}
+.shadow
+{
+    fill: green;
+    fill-opacity: 0.2;
+    stroke: black;
+    stroke-width: 1;
+}
+
+.highlightpicker
+{
+    fill: green;
+    fill-opacity: 0.3;
+    stroke: black;
+    stroke-width: 1;
+}
+.filledpicker
+{
+    fill: red;
+    fill-opacity: 0.3;
+    stroke: black;
+    stroke-width: 1;
+}
+.fullpicker
+{
+    fill: green;
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: 1;
+}
+.fullfilledpicker
+{
+    fill: red;
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: 1;
+}
+.white
+{
+    fill: white;
+}
+.black
+{
+    fill: black;
+}
+.green
+{
+    fill: green;
+}
+.bundle
+{
+    fill: green;
+}
+.red
+{
+    fill: red;
+}
+circle
+{
+    /*stroke-width: 2px;*/
+}
+text
+{
+    font-family: sans-serif;
+    font-size: 9pt;
+    pointer-events: none;
+    stroke: none;
+    text-anchor: middle;
+}
+.order
+{
+    fill: black;
+    font-size:15px;
+}
+.checked_seat
+{
+    fill: black;
+    font-size:15px;
+}
+.seat_info
+{
+    fill: black;
+    font-size:12px;
+		text-anchor: start;
+}
+.offer
+{
+    fill: red;
+}
+.seatA
+{
+    cursor: pointer;
+    opacity: 1;
+}
+.seatH
+{
+    opacity: 1; /* based on John's comments held seats are changed */
+}
+.seatM
+{
+    stroke: black;
+}
+.seatU
+{
+    opacity: 0.3;
+}
+.seatR
+{
+    opacity: 0.3;
+}
+.seatS
+{
+    opacity: 0.3;
+}
+.seatO
+{
+    opacity: 0.3;
+}
+.seata
+{
+    opacity: 1;
+}
+.seath
+{
+    opacity: 1;
+}
+.seatm
+{
+    stroke: black;
+}
+.seatu
+{
+    opacity: 0.3;
+}
+.seatr
+{
+    opacity: 0.3;
+}
+.seats
+{
+    opacity: 0.3;
+}
+.seato
+{
+    opacity: 0.3;
+}
+.legend-ul
+{
+    display: inline-block;
+    list-style: none;
+}
+.legend-li
+{ 
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.unavailable-indicator
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 12px;
+    width: 12px;
+    height: 12px;
+    font-weight: bold;
+}
+.legend-div
+{
+    text-align: center;
+}

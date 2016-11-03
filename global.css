@@ -1,0 +1,2501 @@
+
+/* =ADA 
+-------------------------------------------------------------- */
+
+a.linkNone:link,
+a.linkNone:visited,
+a.linkNone:hover,
+a.linkNone:active {
+    text-decoration:none;
+}
+
+/* =Reset some bootstrap Styles
+-------------------------------------------------------------- */
+
+.form-control {
+    display: inline-block;
+    max-width: 90%;
+    width: 100%;
+}
+.table th, 
+.table td {
+    border-top: 1px dotted #ddd!important;
+}
+.btn {
+    white-space: normal;
+}
+
+#ticket-forward-navigation .btn:active,
+#ticket-forward-navigation .btn.active 
+{
+  -webkit-box-shadow: none;
+          box-shadow: none;   
+}
+
+h5,
+.h5 {
+    font-size: 16px;
+}
+
+/* =Basic HTML Styles
+-------------------------------------------------------------- */
+
+html {
+    height: 100%;	
+}
+body {		
+    color: #3f3f3f;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a,
+.handCursor {
+    cursor: pointer;
+    outline: 0px solid transparent;
+}
+.dropDown {
+    display: inline-block;
+    position: relative; 
+    width: 75px;
+    height: 34px;
+}
+.dropDown input {
+    margin: 0;
+    padding-right: 25px;
+    text-align: right;
+    width: 100%;
+}
+.dropDown select {
+    background: #dfdfdf;
+    clip: rect( auto, auto, auto, 46px );
+    margin: 0;
+    padding: 6px 4px;
+    text-align: right;
+    width: 100%;
+}
+.dropDown-label {
+    display: inline-block;
+    margin: 0 2px 4px 0;
+    position: relative; 
+    height: 32px;
+}
+.comboBoxWrapper {
+    display: inline-block;
+    height: 34px!important;
+    margin: 0;
+    position: relative;
+}
+.comboBoxWrapper input {
+    height: 34px!important;
+    width: 140px!important;
+    margin: 0;
+    padding-right: 20px;
+}
+.comboBoxWrapper select {
+    background: #dfdfdf;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    clip: rect(0 140px 34px 120px)!important;
+    margin: 0;
+    padding: 6px 4px;
+    height: 34px!important;
+    width: 140px!important;
+}
+label {
+    font-weight: normal;
+}
+nobr {
+    white-space: normal;
+}
+.required {
+    color: #de0400;
+}
+.optional {
+    color: #AfAfAf;
+}
+.fine-print {
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* =Page Regions
+-------------------------------------------------------------- */
+
+#header {
+    background: #F0F0F0;
+    position: relative;
+    padding: 0 0 10px;
+}
+.header-content {	
+    min-height: 125px;
+    padding: 0 75px;
+}
+.header-content img {
+    max-width: 100%;
+}
+.bodyDetails {
+    display: inline-block;
+    width: 100%;
+    min-height: 280px;
+    padding: 0 5px;
+}
+.av-left,
+.av-center,
+.av-right {
+    display: inline-block;
+}
+.articles,
+.article-body-container {
+    display: inline-block;
+    width: 100%;
+}
+.articles .article-container {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px;
+}
+#footer {
+    clear: both;
+}
+.footer-content {
+    padding: 20px;
+}
+
+ /*= Menus (main nav and utility - off canvas navs for mobile)
+-------------------------------------------------------------- */
+
+.content-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+.menu-toggle {
+    display: inline-block;
+}
+#menu,
+#content,
+.customer-options  {
+    width: 100%;
+    display: block;
+    position: relative;
+    transition: .2s all ease;
+}
+#menu {
+    background: none transparent;
+    margin: 0 0 0 -100%;	
+	float: left;
+    width: 80%;
+}
+#content {
+    background: #fff;
+    background: rgba(255,255,255, 0.5);
+	margin-left: 0;
+	padding: 20px 0;
+	float: left;
+    overflow: hidden;
+}
+.customer-options {
+    margin-right: -200%;
+    float: right;
+    width: 80%;
+    top: auto;
+    text-align: left;
+}
+.active-nav #menu {	
+    margin-left: 0;	
+    width: 80%;
+}
+.active-nav #content {
+	margin-right: -100%;
+}
+.active-nav .customer-options {	
+	margin-right: -100%;
+	float: right;		
+}
+.active-sidebar .customer-options {
+	margin-right: 0;
+    width: 80%;
+}
+.active-sidebar #content  {
+    margin-left: -80%;
+}
+.active-sidebar #menu {
+    margin-left: -200%;
+}
+.menuContainer .nav li a {
+    border-bottom: 1px solid #ddd;
+}
+    
+/* reset utility nav menu styles for small touch screens */
+    
+.menuContainer.utility-nav {
+    display: block;
+    width: auto;
+}
+.menuContainer.utility-nav ul li {
+    float: none;
+}
+.menuContainer.utility-nav ul li a {
+    display: block;
+    padding: 10px;
+}
+
+/* reset main nav menu styles for small touch screens */
+    
+.menuContainer.main-nav {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.menuContainer.main-nav .nav {
+    display: block;
+    margin: 0;
+}
+
+.menuContainer.main-nav .nav .menuTopItem  {
+    float: none;
+    text-align: left;
+    margin: 0;
+}
+.menuContainer.main-nav .nav li .menu_item {
+    border-radius: 0;
+    display: block;
+    float: none;
+    padding: 10px;
+}
+.menuContainer.main-nav .nav li .dropdown-toggle,
+.menuContainer.main-nav .nav .menuTopItem .menu_item .glyphicon {
+    display: none;
+}
+.menuContainer.main-nav .nav li .dropdown-menu {
+    background: none;
+    background-color: rgba(0,0,0,0.05);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    float: none;
+    top: auto;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1000;
+}
+.menuContainer.main-nav .nav li .dropdown-menu li a {
+    white-space: normal;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 10px 10px 20px;
+}
+    
+/* reset order info box styles for small touch screens */
+    
+#orderInfo {
+    background: none transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 20px 10px 20px;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0;
+    width: auto;
+}
+.active-promotions {
+    border-bottom: 1px dotted #ccc;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+}
+.active-promotions ul {
+    margin: 0;
+}
+.activePromocodeText {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+.promoCodeListItem {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.customer-greeting {
+    font-size: 18px;
+}
+.customer-greeting, 
+.customer-order, 
+.customer-buttons, 
+.order-message {
+    display: inline-block;
+    margin: 0 0 10px;
+    width: 100%;
+}
+.shopping-cart-link {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* = MENU toggle for mobile (show & hide menu and shopping cart)
+-------------------------------------------------------------- */
+
+.menu-toggle.btn-default {
+    background-color: rgba(0,0,0,0.25);
+    border: 0;
+    color: #fafafa;
+    font-size: 25px;
+    margin: -19px 0 0;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 10px;
+}
+.menu-toggle.sidebar-button {
+    right: 10px;
+    left: auto;
+}
+.menu-toggle span.mobile-cart-indicator {
+    background: #428BCA;
+    font-family: Times New Roman;
+    position: absolute;
+    top: -4px;
+    left: -7px;
+}
+
+/* =Search Box
+-------------------------------------------------------------- */
+
+.search-box {
+    background: #efefef;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0 0 20px;
+}
+.search-box p {
+    font-style: italic;
+}
+.search-box label {
+    width: 100%;
+}
+.search-box form {
+    margin: 0;
+}
+.search-box form img,
+.search-box form input[type="submit"] {
+    cursor: pointer;	
+}
+.search-box form ul {
+    margin: 0;
+}
+.search-box form ul li {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+.search-box .form-control {
+    width: 100%;
+    max-width: 94%;
+}
+.search-box .btn {
+    width: 100%;
+}
+
+/* = Search Results
+-------------------------------------------------------------- */
+
+.odd {
+    background: #f0f0f0;
+}
+.even {
+    background: #fcfcfc;
+}
+.pagination-box {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+}
+.pagination {
+    margin: 0 0 20px;
+}
+
+/* = Search Results widgets
+-------------------------------------------------------------- */
+
+.search-results-container {
+    display: inline-block;
+    width: 100%;
+}
+.search-results-container h3 {
+    margin: 10px 0 ;
+}
+.search-results-container .results-box {
+    margin: 0 0 10px;
+}
+.search-results-container .item-description .item-name {
+    font-size: 18px;
+    display: block;
+}
+.search-results-container .item-image .item-logo {
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+}
+.search-results-container .item-image.no-logo .item-logo {
+    background: #d7d9da;
+}
+.search-results-container .item-start-date .start-date-label,
+.search-results-container .item-end-date .end-date-label {
+    font-size: 11px;
+    margin-right: 5px;
+}
+.search-results-container .item-start-date,
+.search-results-container .item-end-date,
+.search-results-container .item-venue,
+.search-results-container .item-price-range,
+.search-results-container .item-teaser {
+    color: #666;
+    font-size: 12px;
+    margin: 3px 0 0;
+}
+.search-results-container .item-teaser {
+    text-align: left;
+}
+.availability-icon img {
+    height: 20px;
+    width: auto;
+}
+
+/* = Search Results widget 1 & 2 (standard & grid)
+-------------------------------------------------------------- */
+
+.standard-search-results .result-box-item-details,
+.detailed-search-results .result-box-item-details {
+    text-align: center;
+}
+.standard-search-results .item-link .availability-icon,
+.detailed-search-results .item-link .availability-icon {
+    padding: 6px 12px;
+}
+.standard-search-results .item-link .btn,
+.detailed-search-results .item-link .btn {
+    width: 100%;
+}
+    
+/* = Search Results widget 2 (details)
+-------------------------------------------------------------- */
+
+.detailed-search-results .item-image.result-box-item-details {
+    padding: 0 0 10px 0;
+}
+
+/* = Search Results widget 3 (grid)
+-------------------------------------------------------------- */
+
+.grid-result {
+    float: left;
+    margin: 0 1% 1%;
+    padding: 10px;
+    width: 48%;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.grid-result.row-first-result-sm {
+    clear: left;
+}
+.grid-result .item-image {
+    margin: 0 0 10px;
+}
+.grid-result .item-image img {
+    width: 100%;
+    max-width: 100%;
+}
+.grid-result .availability-icon {
+    padding: 10px 0;
+    text-align: center;
+}
+.grid-result .item-link .btn {
+    width: 100%;
+}
+
+/* = Search Results Pagination
+-------------------------------------------------------------- */
+
+.pagination {
+    margin: 10px 0 10px;
+}
+.pagination a .glyphicon {
+    line-height: 20px;
+}
+
+/* = Search Results Availability legend
+-------------------------------------------------------------- */
+    
+.availability-legend.result-box {
+    background: #F0F0F0;
+    margin: 10px 0;
+}
+.availability-legend.result-box h4 {
+    padding: 0 0 5px;
+    margin: 0 0 5px;
+    border-bottom: 1px dotted #ddd;
+}
+.availability-legend .result-box-item-details {
+    width: 50%;
+    font-size: 11px;
+}
+.availability-legend .result-box-item-details .availability-icon {
+    margin: 0 10px 0 0;
+}
+
+/* =item Information
+-------------------------------------------------------------- */
+
+.item-box,
+.result-box {
+    display: inline-block;
+    margin: 0 0 20px;
+    width: 100%;
+}
+.item-box h4,
+.result-box h3 {
+    line-height: 1;
+    margin: 0 0 15px;
+}
+.item-box .field-label {
+    color: #666;
+    display: inline-block;
+    font-size: 11px;
+    margin: 0 5px;
+}
+.item-box label br {
+    display: none;
+}
+.item-box .list-inline li {
+    margin-right: 20px;
+}
+.item-box .fine-print {
+    margin: 10px 0 0;
+}
+.item-box-item,
+.result-box-item {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+.item-box-item-details,
+.result-box-item-details {
+    display: inline-block;
+    margin: 0 0 5px;
+    width: 100%;
+}
+.item-box-detail-data,
+.result-box-detail-data {
+    display: inline-block;
+    margin-right: 10px;
+}
+.item-box-item-details .default-selected-text {
+    color: #7f7f7f;
+    font-style: italic;
+    margin-left: 5px;
+}
+.item-box .navigation-box {
+    margin: 10px 0 0;
+}
+.item-box .attention {
+    margin: 0;
+}
+.item-information.item-box ul,
+.item-information.item-box ul li:first-child,
+.item-information.item-box ul li h3,
+.item-information.item-box ul li h4 {
+    margin: 0;
+}
+.item-information.item-box ul li {
+    margin: 5px 0 0;
+}
+.item-information.item-box .item-description-details {
+    display: inline-block;
+    width: 100%;
+}
+.item-information.item-box .item-logo {
+    padding: 5px;
+    max-width: 50%;
+    float: left;
+}
+.item-information.item-box .item-logo img {
+    border-radius: 4px;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* = Map & Best Available Seat Select
+-------------------------------------------------------------- */
+
+.seat-tabs-box {
+    display: inline-block;
+    width: 100%;
+}
+.seat-tabs-box h1 {
+    margin: 0 0 10px;
+}
+.seat-tabs-box .seat-tabs {
+    display: block;
+}
+.seat-tabs-box .seat-tabs .seat-tab {
+    background: #F9F9F9;
+    display: inline-block;
+    color: #7f7f7f;
+    font-size: 14px;
+    padding: 10px;
+    width: 49%;
+    text-align: center;
+}
+.seat-tabs-box .seat-tabs .seat-tab:hover {
+    background: #a5bfd6;
+    color: #fff;
+}
+.seat-tabs-box .seat-tabs .seat-tab.active {
+    background-color: #428BCA;
+    border-color: #357EBD;
+    color: #fff;
+}
+.fee-info.best-available-selected {
+    margin: 0 0 10px;
+}
+.item-box-item-details.price-zone-option {
+    border-bottom: 1px dotted #ddd;
+    margin: 0 0 5px;
+    padding: 0 5px 5px;
+}
+.item-box-item-details.price-zone-option .zone-label {
+    display: inline-block;
+    margin: 0;
+}
+.item-box-item-details.price-zone-option.best-available-price-option {
+    border: 0;
+    padding-left: 35px;
+    line-height: 1;
+}
+.item-box-item-details.price-zone-option .price-zone-color {
+    display: inline-block;
+    float: left;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+}
+.item-box-item-details .price-zone-amount {
+    display: inline-block;
+    width: 100%;
+}
+.item-box-item-details .price-zone-amount .price-zone-amount-amount {
+    float: right;
+}
+.alt-section-option {
+    padding: 5px 10px;
+}
+.navigation-box.item-select-navigation .btn {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 5px;
+}
+.venue-image h4 {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 15px;
+}
+.venue-image h4 .small-heading-text {
+    display: block;
+    margin: 5px 0 0;
+}
+.venue-image.item-box img {
+    max-width: 100%;
+    height: auto;
+}
+.select-tickets-column.no-venue-image {
+    max-width: 100%;
+}
+#seat-quantity .price-details,
+.charge-message-link {
+    display: block;
+    margin: 3px 0 0;
+    clear: left;
+}
+#seat-price-zone .charge-message-link {
+    float: left;
+    margin: 5px 0 0 5px;
+}
+.navigation-box.item-select-navigation .btn-primary {
+    float: none;
+}
+
+/* =SVG map styles
+-------------------------------------------------------------- */
+
+.price-type-modal {
+    display: none;
+    top: 15%;
+    left: 10%;
+    position: absolute;
+    z-index: 50;  
+    width: 80%;
+}
+.map_legend_li div {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border: solid 1px #000000;
+    background-color: #CCFF99;
+    display: inline-block;
+    width: 10px;
+    height: 10px;    
+}
+.screen-availability {
+    display: inline-block;
+    border: solid 1px #000000;
+    background-color: #CCFF99;
+    width: 10px;
+    height: 10px;    
+}
+#screen_flip_section .item-box-item-details select {
+    width: auto;
+}
+.map_legend_li div#unavailable {
+    opacity: 0.3;
+}
+.seat-prices li .select-seat-price {
+    width: 100%;
+}
+.seat-prices li .select-seat-price .pricetype-label {
+    margin-right: 5px;
+}
+.tooltip-seat-info {
+    font-weight: bold;
+    font-size: 14px;
+}
+.tooltip-avail-message {
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0 0;
+    padding: 5px;
+    text-align: center;
+}
+.tooltip-avail-message.Available {
+    background-color: #2cab00;
+}
+.tooltip-avail-message.Unavailable {
+    background-color: #f00;
+}
+.caps-label {
+    font-weight: bold;
+    margin: 3px 0 0;
+}
+.map-parent {
+    position: relative;
+}
+.map-parent + img {
+    width: 100%;
+}
+
+/* =Miscellaneous Items
+-------------------------------------------------------------- */
+
+.misc-item-image .modal-body img {
+    width: 100%;
+    width: 100%;
+}
+.misc-item-option-description.item-box-item-details {
+    margin-top: 3px;
+}
+.misc-item-preview .misc-item-thumnails {
+    display: inline-block;
+    width: 100%;
+}
+.misc-item-preview .misc-item-thumnails li {
+    display: inline-block;
+    float: left;
+    margin: 1%;
+    width: 31%;
+}
+.misc-item-preview .misc-item-thumnails li img {
+    width: 100%;
+}
+.misc-item-navigation.navigation-box .btn-primary {
+    float: none;
+}
+
+/* =Promo Code Box
+-------------------------------------------------------------- */
+
+.promotional-code-input {	
+    display: inline-block;
+    margin: 0 0 20px;
+    width: 100%;
+}
+.promotional-code-input ul {
+    margin: 0;
+    list-style: none;
+}
+.promotional-code-input ul li {
+    margin: 0 0 10px;
+}
+.last-promotional-code-name {
+    background: #fcfcfc;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center
+}
+.last-promotional-code-name span {
+    background: url(../images/star.png) left center no-repeat;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.last-promotional-code-name a {
+    display: block;
+    margin: 10px 0 0;
+}
+.promotional-code-input .form-control {
+    max-width: 100%;
+}
+.active-promo-event,
+.active-promo-event td {
+    background: #f6edbd;
+}
+.active-promo-event .item-name {
+    background: url(../images/star.png) 0 2px no-repeat;
+    padding-left: 20px; 
+}
+
+/* =Shopping Cart
+-------------------------------------------------------------- */
+
+.order-items .last-column {
+    text-align: right;
+}
+.order-items .item-options .btn {
+    margin: 5px 3px 0;
+}
+
+/* =Shopping Cart - item listings
+-------------------------------------------------------------- */
+
+.item-box-item-details.seat-location {
+    min-width: 300px;
+}
+.admission-row.section-box-item .section-box-item-details {
+    border-top: 1px dotted #ddd;
+    padding: 5px 0;
+}
+.admission-row.section-box-item .section-box-item-details:first-child {
+    border: 0;
+}
+.admission-row.section-box-item .section-box-item-details select {
+    float: right;
+}
+.admission-row.section-box-item .section-box-item-details.last-column {
+    text-align: right;
+}
+.order-bundles.section-box h4 {
+    margin: 15px 10px 10px;
+}
+.order-bundles h4:first-child {
+    margin: 0 10px 10px;
+}
+
+/* =Button and Navigation Boxes
+-------------------------------------------------------------- */
+
+.navigation-box {
+    display: inline-block;
+    margin: 20px 0 0;
+    width: 100%;
+}
+.navigation-box .btn-default {
+    float: left;
+}
+.navigation-box .btn-primary {
+    float: right;
+}
+
+/* =Attention and Warning Messages
+-------------------------------------------------------------- */
+
+.spotlight-message h3 {
+    color: #2c77b8;
+    border-bottom: 1px dotted #2c77b8;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+}
+.spotlight-message-body {
+    margin: 10px 0;
+}
+.spotlight-message-body a {
+    text-decoration: underline;
+}
+.spotlight-message .btn-close {
+    background: #B82C2C;
+    border: 1px solid #B82C2C;
+    color: #fff;
+}
+.spotlight-controls {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+/* =Login delivery
+-------------------------------------------------------------- */
+
+.order-contact .billing-info,
+.order-contact .shipping-info {
+    min-height: 84px;
+    margin: 0 0 10px;
+}
+.order-contact .billing-info label,
+.order-contact .shipping-info label {
+    display: block;
+}
+.order-contact .billing-info select,
+.order-contact .billing-info .btn-group {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 5px;
+}
+.delivery-method-description {
+    font-size: 85%;
+    color: #666;
+}
+
+/* =Order Contact
+-------------------------------------------------------------- */
+
+.order-contact-heading {
+    margin: 0 0 20px;
+}
+.order-contact-heading h1 {
+    margin: 0;
+}
+.order-contact-heading p {
+    margin: 5px 0 0;
+}
+.order-customer-details h3 {
+    border-bottom: 1px dotted #ccc;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+}
+.order-customer-contact,
+.order-customer-address,
+.order-customer-delivery {
+    margin: 0 0 20px;
+}
+.account-box.payment-input-box,
+.account-box.default-payment-method {
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    padding: 20px;
+}
+.payment-methods-list {
+    display: inline-block;
+    width: 100%;    
+}
+.payment-methods-list .payment-method-option {
+    background: #fcfcfc;
+    border-radius: 4px;
+    display: inline-block;
+    float: left;
+    margin: 0 1% 1%;
+    padding: 5px;
+    text-align: center;
+    width: 48%;
+}
+.payment-methods-list .payment-method-option:hover {
+    background: #f7f7f7;
+    text-align: center;
+}
+.payment-methods-list .payment-method-option .payment-method-label {
+    display: block;
+}
+.payment-methods-list .payment-method-option .payment-method-label img {
+    display: block;
+    margin: 3px auto;
+}
+.payment-box .field-label {
+    line-height: 32px;
+}
+.payment-box .field-value {
+    display: inline-block;
+    margin: 0 0 5px;
+    padding: 6px 12px;   
+}
+.default-payment-method .field-label {
+    width: 200px;
+}
+.order-customer-details .item-box-item,
+.order-totals .section-box-item {
+    border-top: 1px dotted #ddd;
+}
+.order-customer-details .item-box-item label {
+    width: 100%;
+}
+
+/* =Login/forgot password/logout
+-------------------------------------------------------------- */
+
+.login-box.account-box,
+.forgot-password-box.account-box {
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    padding: 20px;
+}
+.login-box .forgot-password a {
+    display: inline-block;
+    margin: 0 0 5px;
+    padding: 10px 0;
+}
+.logout-box.account-box .navigation-box {
+    margin: 20px 0 0;
+}
+
+/* = customer account (create and management)
+-------------------------------------------------------------- */
+
+.lookup-address .btn {
+    margin: 10px 0 10px 0;
+    width: 220px
+}
+.password-rules {
+    display: inline-block;
+    margin: 0 0 5px;
+}
+.account-options-heading {
+    display: block;
+    margin: 0 0 5px;
+}
+.account-options {
+    display: inline-block;
+    margin: 0 0 15px;
+    width: 100%;
+}
+.account-options.comm-prefs li:last-child,
+.account-options.mark-prefs li:last-child {
+    height: 0;
+}
+.account-options.keywords {
+    margin: 0;
+}
+.account-options.keywords li {
+    float: left;
+    width: 32%;
+    margin:  1% 1% 0 0;
+}
+.account-options.keywords li:last-child {
+    height: 0;
+    width: 0;
+    margin: 0;
+}
+
+/* = My Account - common elements
+-------------------------------------------------------------- */
+
+.my-account-section-heading {
+    margin: 20px 0 0 ;
+}
+.small-heading-text {
+    font-size: 75%;
+    display: block;
+    margin: 10px 0 0 0;
+}
+.section-link {
+    font-size: 75%;
+    margin: 0 0 0 10px;
+}
+.account-box,
+.section-box {
+    border-top: 1px dotted #ccc;
+    display: inline-block;
+    padding: 20px 0 0;
+    margin:  20px 0 0;
+    width: 100%;
+}
+.section-box:first-child {
+    border-top: 0;
+    margin: 0;
+}
+.account-box h1,
+.section-box h1,
+.account-box h2,
+.section-box h2,
+.account-box h3,
+.section-box h3,
+.account-box h4,
+.section-box h4 {
+    line-height: 1;
+    margin: 0 0 15px;
+}
+.account-box .field-label,
+.section-box .field-label {
+    color: #666;
+    display: inline-block;
+}
+.account-box label br,
+.section-box label br {
+    display: none;
+}
+.account-box .list-inline li,
+.section-box .list-inline li {
+    margin-right: 20px;
+}
+.account-box-item,
+.section-box-item {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+.account-box-item .navgiation-box,
+.section-box .navigation-box {
+    margin: 10px 0 0;
+}
+.account-box .attention,
+.section-box .attention {
+    margin: 0;
+}
+.section-box.page-heading,
+.account-box.page-heading {
+    margin: 0 auto;
+}
+.section-box.page-heading h1,
+.account-box.page-heading h1 {
+    margin: 0;
+}
+.section-box.page-heading p,
+.account-box.page-heading p {
+    margin: 5px 0 0;
+}
+.account-box {
+    border-top: 0;
+    display: block;
+    padding: 10px 0;
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+.account-box.section-box:first-child {
+    padding: 10px 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.account-box li {
+    margin: 0 0 5px;
+}
+.account-box .field-label {
+    width: 100%;
+}
+.account-box .form-control {
+    display: inline-block;
+    width: 90%;
+}
+.account-box .username-options {
+    display: inline-block;
+    width: auto;
+}
+.account-box.navigation-box .btn-primary {
+    float: right;
+}
+
+/* = My Account - Navigation
+-------------------------------------------------------------- */
+
+.my-account-nav-heading {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 0 10px;
+    padding: 10px;
+}
+.my-account-nav-heading .nav-heading-toggle {
+    border-left: 1px dotted #ccc;
+    color: #3f3f3f;
+    float: right;
+    padding: 3px 5px 3px 10px;
+}
+.my-account-nav-heading .nav-heading-toggle .glyphicon-chevron-down,
+.my-account-nav-heading .nav-heading-toggle.collapsed .glyphicon-chevron-up {
+    display: none;
+}
+.my-account-nav-heading .nav-heading-toggle.collapsed .glyphicon-chevron-down,
+.my-account-nav-heading .nav-heading-toggle .glyphicon-chevron-up {
+    display: inline-block;
+}
+.my-account-nav {
+    height: 0;
+    overflow: hidden;
+    margin: 0 10px;
+}
+.my-account-nav ul li {
+    border-bottom: 1px dotted #ccc;
+    display: inline-block;
+    width: 100%;
+}
+.my-account-nav ul li a {
+    border-right: 5px solid transparent;
+    color: #666;
+    display: block;
+    font-size: 13px;
+    outline: 0;
+    margin: 5px 0;
+    padding: 5px 8px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.my-account-nav ul li.active,
+.my-account-nav ul li:hover {
+    background: #f0f0f0;
+}
+.my-account-nav ul li.active a,
+.my-account-nav ul li:hover a {
+    color: #428BCA;
+    border-right-color: #428BCA;
+}
+.my-account-nav ul li a .badge {
+    background-color: #428BCA;
+    margin-left: 10px;
+}
+
+/* = My Account - Order History
+-------------------------------------------------------------- */
+
+.order-number.section-box-item-details .section-box-detail-data {
+    margin-right: 0;
+}
+
+/* = My Account - My account Header
+-------------------------------------------------------------- */
+
+.account-header .customer-summary {
+    font-size: 28px;
+    display: inline-block;
+    width: 100%;
+}
+.account-header .customer-summary .account-header-text {
+    color: #7F7F7F;
+    font-size: 12px;
+}
+.account-header .customer-summary .account-header-text .customer-number,
+.account-header .customer-summary .account-header-text .create-date {
+    display: block;
+    margin: 3px 0;
+}
+.account-header .customer-value-section {
+    background-color: #F0F0F0;
+    margin: 5px 0 0;
+}
+
+/* = My Account - Account Information
+-------------------------------------------------------------- */
+
+.account-box-item-details,
+.section-box-item-details {
+    display: inline-block;
+    margin: 0 0 5px;
+    width: 100%;
+}
+.account-box-detail-data,
+.section-box-detail-data {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+.account-box-item-details.last-column .account-box-detail-data,
+.section-box-item-details.last-column .section-box-detail-data {
+    padding: 0 0 0 10px;
+}
+.account-box-item-details .form-control,
+.section-box-item-details .form-control {
+    width: auto;
+    max-width: 125px;
+}
+.account-box-item-details .default-selected-text,
+.section-box-item-details .default-selected-text {
+    color: #7f7f7f;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+/* = My Account - Message Centre
+-------------------------------------------------------------- */
+
+.message-link.active,
+.message-link.active:hover {
+    color: #7f7f7f;
+    cursor: default;
+    text-decoration: none;
+}
+
+/* = My Account - offers
+-------------------------------------------------------------- */
+
+.section-box-item .offer-details h3 {
+    margin: 0 0 10px;
+}
+.offer-description {
+    clear: both;
+}
+.offer-controls {
+    margin: 10px 0 0;
+}
+.view-offer-admission-details {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 5px;
+}
+.view-offer-admission-details .view-offer-admissions-quantity {
+    line-height: 28px;
+    float: left;
+}
+.offer-addmission-box,
+.offer-bundle-addmission-box {
+    transition: all .2s ease-in;
+}
+.offer-addmission-box.inactive-selection,
+.offer-bundle-addmission-box.inactive-selection {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.offer-addmission-box.active-selection-selection,
+.offer-bundle-addmission-box.active-selection-selection {
+    height: auto;
+    opacity: 1;
+}
+.view-offer-admission-details .view-offer-controls {
+    float: right;
+}
+.offer-toggle.inactive-selection {
+    display: none;
+}
+
+/* = My Account - linked accounts
+-------------------------------------------------------------- */
+
+.linked-account-name {
+    font-size: 18px;
+}
+
+/* = My Account - memberships
+-------------------------------------------------------------- */
+
+.section-box-item.Expired {
+    opacity: 0.8;
+}
+.Active .membership-status {
+    color: #0faf0b;
+}
+.Expired .membership-status {
+    color: #DE0400;
+}
+.membership-expiry {
+    color: #666;
+}
+.membership-detail {
+    display: block;
+    margin: 5px 0;
+}
+.membership-detail span,
+.membership-expiry span {
+    display: inline-block;
+}
+
+/* = My Account - memberships
+-------------------------------------------------------------- */
+
+.saved-payment-nav .navDelete {
+    display: block;
+    margin: 10px 0 0;
+    width: 220px;
+}
+.ticket-details.section-box-item:hover {
+    cursor: pointer;
+    background-color: #b2d4f1;
+    transition: background-color .2s ease-in;
+}
+
+/* = My Account - reprint tickets
+-------------------------------------------------------------- */
+
+.reprint-ticket-item .section-box-item-details {
+    width: auto;
+}
+.reprint-ticket-item .section-box-item-details.last-column {
+    float: right;
+}
+
+/* = error page
+-------------------------------------------------------------- */
+
+.account-box.error-box .navigation-box {
+    margin: 20px 0;
+}
+
+/* =Human Check
+-------------------------------------------------------------- */
+
+.captcha-parent h1 {
+    margin: 0;
+}
+.captcha-parent .captcha-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.captcha-parent .fine-print {
+    margin: 10px 0;
+}
+.captcha-parent .captcha-link,
+.captcha-parent .captcha-link .glyphicon {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+/* =Feature Scrolling
+-------------------------------------------------------------- */
+
+.primary-feature-wrapper {
+    display: block;
+    margin: 0 auto 20px;
+}
+.primary-feature-wrapper .item.static {
+    position: relative;
+}
+
+/* = Common Popup Styles
+-------------------------------------------------------------- */
+
+#popupDiv {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999 !important;
+}
+.modal-body {
+    -webkit-overflow-scrolling: touch;
+    min-height: 50px;
+}
+.info-content.modal-body,
+.info-content.modal-body iframe {
+    height: 300px;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+}
+#popupBody,
+.popupDetails {
+    padding: 20px;
+}
+#popupDiv_confirmDiv {
+    background: url(confirm.gif) no-repeat 15px 15px;
+    padding-left: 80px;
+    min-height: 50px;
+}
+.popupDiv_addDonation .modal-body {
+    height: 200px;
+}
+.popup-add-donation iframe {
+    min-height: 192px;
+}
+
+/* =Lightbox
+-------------------------------------------------------------- */
+
+.black_overlay {
+    -moz-opacity: 0.6;
+    background-color: #000;
+    display: none;
+    filter: alpha(opacity=60);
+    opacity:.60;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+}
+
+/* = System message blocks
+-------------------------------------------------------------- */
+
+.system-message-block {
+    background: #fcfcfc;
+    border: 0;
+    border-radius: 4px;
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    margin: 0 20px 20px;
+}
+.system-message-block .message-heading {
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+.system-message-block .message-body div {
+    margin: 0 0 5px;
+}
+.info-message {
+    background-color: #e6f1fb;
+}
+.error-message,
+.timeout-message {
+    background-color: #fbebeb;
+}
+
+
+/* =Date/time selection widget
+-------------------------------------------------------------- */
+
+.widget {
+    background: #eaeaea;
+    background: -moz-linear-gradient(top,  #fff,  #f3f3f3);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f3f3));
+    border: 1px outset #d3d3d3;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+}
+.widgetBody {
+    background: #fff;
+    padding: 0;
+}
+.widgetBody .account-box {
+    background: none transparent;
+    border: 0;
+    padding: 0;
+}
+.drop {
+    opacity: .5;
+    background: #000;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    filter: alpha(opacity=50);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+}
+
+/* =Multilingual Start Page
+-------------------------------------------------------------- */
+
+#chooseLanguage .account-box {
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* = waiting room
+-------------------------------------------------------------- */
+
+.waiting-room #header {
+    padding: 10px 0 10px
+}
+
+/* =Calendar Widget
+-------------------------------------------------------------- */
+
+#calendar-widget-frame {
+    display: block;
+    background: #fff;
+    width: 100%;	
+}
+#calendarWidget-body {
+	background: #fff;
+}
+#calendarWidget-body,
+#calendarWidget-body form,
+#calendarWidget-body .table {
+    margin: 0;
+    padding: 0;
+}
+#calendarWidget-navigation {
+	background: #2C76B7;
+	color: #fff;
+	width: 100%;	
+}
+#calendarWidget-navigation td {
+	text-align: center;
+}
+#calendarWidget-navigation td a {
+	color: #fff;
+	text-decoration: none;	
+}
+#calendarWidgetHeader {
+	border: solid #ddd;
+	border-width: 1px 1px 0 0;
+	width: 100%;		
+}
+#calendarWidgetHeader td {
+	background: #ececec;
+	border: solid #ddd;
+	border-width: 0 0 0 1px;
+	font-size: 11px;
+	padding: 0;
+	color: #666666;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: 28px;
+	height: 28px;	
+}
+#calendarWidgetTable {
+	border: solid #ddd;
+	border-width: 1px 1px 0 0;	
+	width: 100%;	
+}
+#calendarWidgetTable td {
+	background: #fff;
+	border: solid #ececec;
+	border-width: 0 0 1px 1px;
+	text-align: center;
+	vertical-align: middle;
+	width: 28px;
+	height: 28px;	
+}
+#calendarWidgetTable .WidgetToday { 	
+	background: #ececec;
+}
+#calendarWidgetTable .WidgetEvent:hover,
+#calendarWidgetTable .WidgetEvent {
+	background: #2C76B7;
+	color: #fff;
+	cursor: pointer; 
+}
+
+/* =video widget
+-------------------------------------------------------------- */
+
+.video-widget {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =Social Container
+-------------------------------------------------------------- */
+
+.socialContainer {
+    display: inline-block;
+}
+
+.addThis img{
+	vertical-align: baseline;
+}
+
+/* =av:formfields in articles (make them look the same as bootstrap formfields)
+-------------------------------------------------------------- */
+
+form[name="avArticleForm"] input[type="text"],
+form[name="avArticleForm"] input[type="password"],
+form[name="avArticleForm"] select,
+form[name="avArticleForm"] textarea {
+    display: inline-block;
+    width: 94%;
+    height: 34px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+form[name="avArticleForm"] textarea {
+    height: auto;
+}
+form[name="avArticleForm"] input[type="text"]:focus,
+form[name="avArticleForm"] input[type="password"]:focus,
+form[name="avArticleForm"] textarea:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+form[name="avArticleForm"] span[id^="colour::BOset"] {
+    border-color: #ccc!important;
+    display: inline-block;
+    border-radius: 4px;
+}
+form[name="avArticleForm"] span[id^="colour::BOset"] img {
+    width: 34px!important;
+    height: 34px!important;
+}
+
+@media screen and ( min-width: 515px ) {
+    
+     /* = Search Box
+    -------------------------------------------------------------- */
+       
+    .search-box {
+        padding: 10px;
+        margin: 0 0 20px;
+    }
+    .search-box form {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    .search-box form ul {
+        display: inline-block;
+        width: 100%;
+    }
+    .search-box form ul li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .search-box form ul li .field-label {
+        display: inline;
+    }
+    .search-box form ul li .form-control {
+        display: inline-block;
+        width: 94px;
+    }
+
+    /* = Search results
+    -------------------------------------------------------------- */
+    
+    .result-box-item-details {
+        float: left;
+        padding: 0 5px 0;
+        margin: 0;
+        width: auto;
+    }
+    .result-box-item-details.last-column {
+        float: right;
+        margin: 0 0 0;
+    }
+
+    /* = Search Result Widget (standard)
+    -------------------------------------------------------------- */
+    
+    .standard-search-results .result-box-item-details,
+    .detailed-search-results .result-box-item-details {
+        text-align: left;
+    }
+    .standard-search-results .result-box-item-details.last-column,
+    .detailed-search-results .result-box-item-details.last-column {
+        text-align: right;
+    }
+    .standard-search-results .result-box-item .item-link .btn,
+    .standard-search-results .result-box-item .availability-icon,
+    .detailed-search-results .result-box-item .item-link .btn,
+    .detailed-search-results .result-box-item .availability-icon {
+        display: inline-block;
+        width: auto;
+    }
+    
+    /* = Search Results widget 2 (Detailed)
+    -------------------------------------------------------------- */
+
+    .detailed-search-results .item-image.result-box-item-details {
+        width: 20%;
+        min-height: 32px;
+        padding: 0 5px 0 0;
+    }
+    .detailed-search-results .item-image.no-logo .item-logo {
+        height: 100px;
+    }
+    .detailed-search-results .item-description {
+        width: 60%;
+    }
+    .detailed-search-results .item-link.result-box-item-details {
+        width: 20%;
+        text-align: right;
+    }
+        
+    /* = Search Results Availability legend
+    -------------------------------------------------------------- */
+    
+    .availability-legend .result-box-item-details {
+        float: left;
+        margin: 0 5px;
+        padding: 5px;
+        text-align: center;
+        width: auto;
+    }
+
+     /* =Order Contact
+    -------------------------------------------------------------- */   
+    
+    .order-contact .billing-info select {
+        border-radius: 4px 0 0 4px;
+        float: left;
+        width: 60%;
+    }
+    .order-contact .billing-info .btn-group {
+        width: 40%;
+    }
+    .order-contact .billing-info .btn-group .btn:first-child {
+        border-radius: 0;
+        border-left: 0;
+    }
+    .delivery-method-description {
+        display: inline;
+    }
+    .payment-methods-list .payment-method-option {
+        width: 31%;
+    }
+    
+    /* = My Account - common elements
+    -------------------------------------------------------------- */
+    
+    .section-box .no-label-indent,
+    .account-box .no-label-indent  {
+        padding-left: 200px;
+    }   
+    .account-box .field-label {
+        display: inline-block;
+        float: left;
+        width: 200px;
+    }
+    .account-box .form-control {
+        display: inline-block;
+        width: 220px;
+    }
+    
+    .account-box .address-verification .field-label {
+        width: 220px;
+    }
+
+    /* = My Account - Account Information
+    -------------------------------------------------------------- */
+
+    .account-options.keywords li {
+        width: 19%;
+    }
+
+    /* = My Account - Friends
+    -------------------------------------------------------------- */
+
+    .linked-account-detail {
+        display: inline-block;
+        width: 48%;
+    }
+    
+    /* = My Account - Saved Payments
+    -------------------------------------------------------------- */
+
+    .my-account-navigation-box {
+        padding-left: 200px;
+    }
+    .my-account-navigation-box .navUpdate,
+    .my-account-navigation-box .navCancel {
+        min-width: 94px;
+        float: none;
+    }
+    .section-box .change-password-action .btn,
+    .my-account-navigation-box .navDelete {
+        display: block;
+        margin: 10px 0 0;
+        width: 220px;
+        float: none;
+    }
+
+}
+
+@media screen and ( min-width: 768px ) {
+    
+    .search-box form ul li .form-control {
+        width: 110px;    
+    }
+        
+    /* = Search Results widget 3 (Grid)
+    -------------------------------------------------------------- */
+
+    .grid-result {
+        width: 31%;
+        margin: 0 1% 1%;
+        position: relative;
+        min-height: 360px;
+    }
+    .grid-result .item-image.no-logo .item-logo {
+        height: 185px;
+    }
+    .grid-result.row-first-result-sm {
+        clear: none;
+    }
+    .grid-result.row-first-result-md {
+        clear: left;
+    }
+    .grid-result.odd .item-description {
+        background: #F0F0F0;
+        background: rgba(240, 240, 240, 0.90);
+    }
+    .grid-result.even .item-description {
+        background: #FCFCFC;
+        background: rgba(252, 252, 252, 0.90);
+    }
+    .grid-result .item-description {
+        position: absolute;
+        min-height: 94px;
+        bottom: 60px;
+        left: 10px;
+        right: 10px;
+    }
+    .grid-result .item-link {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    .grid-result .item-description .item-teaser,
+    .grid-result .item-description .item-end-date,
+    .grid-result .item-description .item-venue {
+        cursor: default;
+        overflow: hidden;
+        opacity: 0;
+        height: 0;
+        max-height: 0;
+        transition: all .4s ease-in;
+    }
+    .grid-result:hover .item-description .item-teaser,
+    .grid-result:hover .item-description .item-end-date,
+    .grid-result:hover .item-description .item-venue  {
+        height: auto;
+        opacity: 1;
+        max-height: 500px;
+    }
+    
+    /* = Item information/search results
+    -------------------------------------------------------------- */
+    
+    .item-box-item-details {
+        float: left;
+        margin: 0 5px 0;
+        width: auto;
+    }
+    .item-box-item-details.last-column {
+        float: right;
+        margin: 0 0 0;
+    }
+    
+    .item-information.item-box .item-description-details {
+        float: left;
+    }
+    .item-information.item-box.has-logo1 .item-description-details,
+    .item-information.item-box.has-logo2 .item-description-details {
+        width: 75%;
+        padding: 5px;
+    }
+    .item-information.item-box.has-logo1.has-logo2 .item-description-details {
+        width: 50%;
+        padding: 5px;
+    }
+    .item-information.item-box .item-logo {
+        padding: 5px;
+        width: 25%;
+        float: left;
+    }
+    
+    
+    /* = Map & Best Available Seat Select
+    -------------------------------------------------------------- */
+    
+    .item-box-item-details.price-zone-option,
+    .zone_row .item-box-detail-data {
+        line-height: 42px;
+        border: 0;
+        margin: 0;
+        padding: 0 5px;
+    }
+    .item-box-item-details.price-zone-option .price-zone-color {
+        height: 42px;
+    }
+    .item-box-item-details .price-zone-amount {
+        float: left;
+        padding: 0 5px;
+        min-width: 80px;
+        max-width: 100px;
+        width: auto;
+        text-align: center;
+    }
+    .item-box-item-details .price-zone-amount .price-zone-amount-amount {
+        float: none;
+    }
+    .item-box-item-details .price-zone-amount .price-type-label {
+        display: block;
+        margin: 0 0 5px;
+        font-size: 12px;
+    }
+    
+    /* =Order items
+    -------------------------------------------------------------- */
+
+    .order-items .section-box-item .section-box-item-details .field-label,
+    .order-item-details .section-box-item .section-box-item-details .field-label,
+    .seat-location-information .section-box-item .section-box-item-details .field-label,
+    .bundle-result-admission.section-box-item .section-box-item-details .field-label {    
+        font-size: 11px;
+        line-height: 1;
+        margin: 0 5px;
+    }
+    .admission-row.section-box-item .section-box-item-details {
+        border: 0;
+        padding: 0 10px 0 0;
+    }
+    .admission-row.section-box-item .section-box-item-details select {
+        float: none;
+    }
+    .section-box-item.item-total .item-total-value {
+        float: none;
+    }
+    
+    .payment-methods-list .payment-method-option {
+        width: 23%;
+    }
+    
+    /* = My Account
+    -------------------------------------------------------------- */
+    
+    .small-heading-text {
+        display: inline-block;
+        margin: 0 0 0 10px;
+    }    
+    .last-column,
+    .last-column .form-control {
+        text-align: right;
+    }
+    .account-header .customer-summary .customer-name {
+        float: left;
+    }
+    .account-header .customer-summary .account-header-text {
+        float: right;
+        line-height: 40px;
+    }
+    .account-header .customer-summary .account-header-text .customer-number,
+    .account-header .customer-summary .account-header-text .create-date {
+        display: inline-block;
+        margin: 0 0 0 10px;
+    }
+    .account-header .customer-summary .account-header-text .account-header-label {
+        margin: 0 5px;
+    }
+    .account-header .customer-value-section .account-header-item-details {
+        float: left;
+        line-height: 1;
+        text-align: center;
+        width: 33%;
+    }
+    .account-header .customer-value-section .account-header-item-details .customer-value {
+        display: block;
+        font-size: 16px;
+        margin: 5px 0 0;
+    }
+    .section-box-item-details select {
+        width: auto;
+    }
+    .section-box-item-details {
+        float: left;
+        line-height: 30px;
+        margin: 0;
+        padding: 0 10px 0 0;
+        width: auto;
+    }
+    .section-box-item-details.last-column {
+        float: right;
+    }
+    .order-number.section-box-item-details,
+    .order-date.section-box-item-details {
+        margin-right: 30px;
+    }
+    .saved-payment-details,
+    .membership-detail {
+        width: 33%;
+        float: left;
+    }
+    .ticket-usage-details.section-box-item-details  {
+        text-align: center;
+        float: left;
+        width: 25%;
+    }
+    .popup-ticket-forward .modal-dialog {
+        width: 750px;
+    }
+    
+}
+
+@media screen and ( min-width: 992px ) {
+
+    #header {
+        padding: 45px 0 10px;
+    }
+    .header-content {
+        padding: 0 15px;
+    }
+    #content,
+    .active-nav #content,
+    .active-sidebar #content {
+        float: none;
+        margin: 0 auto;
+        overflow: visible;
+        width: 970px;
+    }
+    
+    .av-left,
+    .av-center,
+    .av-right {
+        display: inline-block;
+        float: left;
+    }
+    .articles .article-container.main-article-body,
+    .articles .article-container.secondary-linked-features,
+    .articles .article-container.tertiary-linked-features {
+        display: inline-block;
+    }
+    .articles .article-container.main-article-body {
+        width: 100%;
+    }
+    .articles.has-secondary-features .article-container.main-article-body {
+        width: 75%;
+        float: right;
+        padding: 0 0 0 10px;
+    }
+    .articles.has-tertiary-features .article-container.main-article-body {
+        width: 75%;
+        float: left;
+        padding: 0 10px 0 0;
+    }
+    .articles.has-secondary-features.has-tertiary-features .article-container.main-article-body,
+    .articles.has-secondary-features.has-tertiary-features .article-container.main-article-body {
+        width: 50%;
+        padding: 0 10px;
+        float: none;
+    }
+    .articles .article-container.secondary-linked-features {
+        width: 25%;
+        float: left;
+        padding: 0 10px 0 0;
+    }
+    .articles .article-container.tertiary-linked-features {
+        width: 24%;
+        float: right;
+        padding: 0 0 0 10px;
+    }
+    
+    /*= off-canvas navigation 
+    **********************************************/
+
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav > li > a:hover, 
+    .nav > li > a:focus {
+        color: #0088cc;
+        background: none;
+    }
+
+    /* MAIN MENU POSITION FOR STANDARD SCREEN */
+
+    #menu,
+    .active-nav #menu,
+    .active-sidebar #menu {
+        background: #E0E0E0;
+        padding: 10px 0;
+        margin: 0;
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+    .menuContainer.main-nav {
+        display: inline-block;
+    }
+    .menuContainer.main-nav .nav .menuTopItem {
+        display: inline-block;
+        position: relative;
+        margin: 0 5px;
+    }
+    .menuContainer.main-nav .nav .menuTopItem .menu_item,
+    .menuContainer.main-nav .nav .open .menuTopItem .menu_item {
+        background-color: transparent;
+        color: #3F3F3F;
+        border: 0;
+        display: inline-block;
+        margin: 0;
+        padding: 5px 10px;
+        float: left;
+    }
+    .menuContainer.main-nav .nav .menuTopItem .menu_item span {
+        display: inline;
+    }
+    .menuContainer.main-nav .nav .menuTopItem .menu_item .glyphicon {
+        display: inline;
+        height: 20px;
+        line-height: 20px;
+        margin: 0 0 0 5px;
+        top: 2px;
+    }
+    .menuContainer.main-nav .nav .menuTopItem .dropdown-toggle {
+        border-left: 1px dotted #3F3F3F;
+    }
+    .menuContainer.main-nav .nav .menuTopItem .dropdown-toggle .glyphicon {
+        top: 0;
+        margin: 0;
+    }
+    .menuContainer.main-nav .nav .menuTopItem .dropdown-menu {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius:  0  0 5px 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.175);
+        display: none;
+        margin: 14px 0 0;
+        padding: 10px 0;
+        position: absolute;
+        width: 300px;
+        top: 100%;
+        z-index: 1000;
+    }
+    .menuContainer.main-nav .nav .menuTopItem.open .dropdown-menu {
+        display: block;
+    }
+    .menuContainer.main-nav .nav .menuTopItem.open [data-toggle="dropdown"] {
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+    .menuContainer.main-nav .nav li .dropdown-menu li a {
+        border: 0;
+        padding: 5px 10px;
+    }
+
+    /* =Order Box
+    -------------------------------------------------------------- */
+
+    .customer-options,
+    .active-nav .customer-options,
+    .active-sidebar .customer-options {
+        background: #000;
+        background: rgba(0,0,0,0.85);
+	    display: inline-block;
+        float: none;
+        margin-right: 0;
+	    padding: 8px 0;
+        position: fixed;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	    z-index: 1001;
+	    opacity: .85;
+    }
+    .customer-options:hover {
+        opacity: 1;
+    }
+    #orderInfo,
+    .active-nav  #orderInfo,
+    .active-sidebar #orderInfo {
+        background: none transparent;
+        border: 0;
+	    color: #fff;
+	    margin: 0 auto;
+	    padding: 0 20px;
+	    width: 960px;
+	    text-align: right;
+    }
+    .customer-greeting,
+    .customer-order,
+    .customer-buttons,
+    .order-message {
+        font-size: 14px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
+    .order-message {
+        font-style: italic;
+        margin: 0 0 0 10px;
+    }
+    #orderTimeout {
+        color: #de0400;
+    }
+    .shopping-cart-link,
+    .shopping-cart-link:hover {
+        background: #333;
+        border-color: #888;
+        color: #fff;
+        font-size: 11px;
+        margin: 0 0 0 10px;
+        padding: 6px 12px;
+        width: auto;
+    }
+    .paypal-express {
+        float: right;
+    }
+    .navExpCheckoutSeparator {
+		margin: 5px 10px 0;
+		display: inline-block;
+		float: left;
+    }
+	.checkout-button {
+		display: inline-block;
+		float: left;
+	}
+    .checkout-info-button {
+        display: block;
+        margin: 0 20px 0 0;
+		clear: both;
+    }
+
+    /* =search box
+    -------------------------------------------------------------- */
+    
+    .search-box form ul li .form-control {
+        width: 190px;    
+    }
+
+    /* =Current Active Promotions
+    -------------------------------------------------------------- */
+
+    .active-promotions {
+        background-color: transparent;
+        border-right: 1px dotted #cfcfcf;
+        border-bottom: 0;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        color: #cfcfcf;
+        overflow: visible;
+        padding: 0 10px 0 0;
+    }
+    .activePromocodeText {
+        font-size: 14px;
+    }
+    .active-promotions ul {
+        display: inline;
+    }
+    .active-promotions ul li {
+        display: inline;
+        margin: 0 3px 0 0;
+    }
+
+    /* = Map & Best Available Seat Select
+    -------------------------------------------------------------- */
+    
+    .venue-image-column,
+    .select-tickets-column,
+    .misc-item-image-column,
+    .select-misc-item-column {
+        display: inline-block;
+        max-width: 50%;
+    }
+    .venue-image-column .venue-image.item-box {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    .map-select-tickets-column {
+        width: 345px;
+        display: inline-block;
+        float: left;
+    }
+    .map-parent {
+        display: inline-block;
+        float: left;
+        width: 585px;
+    }
+    .seat-tabs-box .seat-tabs {
+        display: inline-block;
+        float: right;
+    }
+    .seat-tabs-box h1 {
+        display: inline-block;
+        float: left;
+        margin: 0;
+    }
+    .seat-tabs-box .seat-tabs .seat-tab {
+        width: auto;
+    }
+    
+    .misc-item-preview {
+        margin-left: 20px;
+    }
+    
+    .popup-ticket-forward .modal-dialog {
+        width: 950px;
+    }
+    
+    /* =Promo Code Box
+    -------------------------------------------------------------- */
+
+    .promotional-code-input {
+        max-width: 300px;
+    }
+
+    /* =Shopping Cart
+    -------------------------------------------------------------- */   
+        
+    .order-items .item-options {
+        width: 50px;
+        padding: 0;
+    }
+    
+    /* = My Account - Navigation
+    -------------------------------------------------------------- */
+
+    .my-account-nav-heading {
+        border: 0;
+        border-radius: 0;
+        font-size: 18px;
+        margin-top: 20px;
+        text-align: right;
+        padding: 10px;
+    }
+    .my-account-nav-heading .nav-heading-toggle {
+        display: none;
+    }
+    .my-account-nav {
+        height: auto;
+        overflow: visible;
+    }
+    .my-account-nav ul li {
+        border: 0;
+        margin: 0 0 5px;
+    }
+    .my-account-nav ul li a {
+        border-right: 2px solid transparent;
+        color: #666;
+        display: block;
+        font-size: 13px;
+        outline: 0;
+        margin:  0;
+        padding: 8px 8px 8px 5px;
+        text-align: right;
+        text-decoration: none;
+    } 
+}
+
+
+@media screen and ( min-width: 1200px ) {
+    
+    #content,
+    .active-nav #content,
+    .active-sidebar #content,
+    #orderInfo,
+    .active-nav #orderInfo,
+    .active-sidebar #orderInfo {
+        width: 1170px;
+    }
+
+    .map-select-tickets-column {
+        width: 415px;
+    }
+    .map-parent {
+        width: 715px;
+        padding-left: 20px;
+    }
+
+    .info-content.modal-body,
+    .info-content.modal-body iframe {
+        height: 500px;
+    }
+
+}

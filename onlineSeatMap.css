@@ -1,0 +1,135 @@
+/*= svg map css
+*****************/
+#svg_online_map {
+    overflow: hidden;
+}
+#svg_map_section {   
+    display: block;
+    position: relative;
+}
+#screen_flip_section {
+    margin: 0 0 10px;
+    padding: 0 0 10px;    
+}
+#screen_flip_section select {
+    margin: 0;
+}
+.map-zoom-options {
+    text-align: right;
+}
+.available_price_types {
+    float:left;
+    margin: 0 ;
+    width: 70%;
+}
+#price_type_section_title {
+    margin: 0;
+}
+#seat_pic {
+    margin: 0 2.5%;
+    border-radius: 3px;
+    overflow: hidden;
+    max-height: 150px;
+    width: 25%;
+    float:left;
+}
+#seat_message {
+    margin: 10px 0 0;
+    font-style: italic;
+}
+.seat-prices li {
+	margin: 0 0 5px;    
+}
+
+span#closing_span {
+    color:black;
+    float:right;    
+}
+
+span#closing_span:hover, span.cancel_seat:hover {    
+    cursor: pointer;
+}
+
+div.cancel_seat {    
+    cursor: pointer;
+    float: right;
+}
+
+#selected_seats_ul {
+    padding:0;
+    margin:0;
+}
+#selected_seats_ul li { 
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 5px;  
+    padding: 0 0 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+#selected_seats_ul div.selected_seat_info {       
+    float:left;    
+}
+
+div#add_to_order_section {   
+    text-align:right;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+div.zone_box {
+    border:1px solid black;
+    width:13px;
+    height:13px;
+}
+.clear_both {
+    clear:both;
+}
+
+.warning_red
+{
+    color:Red;
+}
+
+.seat-tooltip {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px;
+    text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+    display:none;      
+    position: absolute;
+    padding: 10px;      
+    z-index: 99;
+}
+div#tooltip_wrapper {
+    position:relative;    
+}
+
+/* Zoom and Pan controller
+---------------------------------------------------------------- */
+
+.pan-controller {
+    fill: #fafafa;
+    stroke: #ccc;
+    stroke-width: 1px;
+}
+.pan-button {
+    fill: #aaa;
+    cursor: pointer;
+}
+.pan-button:hover {
+    fill: #666;
+}
+.zoom-button {
+    fill: #fafafa;
+    stroke: #666;
+    stroke-width: 0.5px;
+    cursor: pointer;
+}
+.zoom-text {
+    font-size: 18px;
+    fill: #666;
+}
+.zoom-button:hover {
+    stroke: #000;
+}
