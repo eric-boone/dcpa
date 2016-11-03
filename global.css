@@ -16,6 +16,7 @@ a.linkNone:active {
     display: inline-block;
     max-width: 90%;
     width: 100%;
+    border-radius: 0px !important;
 }
 .table th, 
 .table td {
@@ -23,6 +24,7 @@ a.linkNone:active {
 }
 .btn {
     white-space: normal;
+    text-transform: uppercase;
 }
 
 #ticket-forward-navigation .btn:active,
@@ -552,7 +554,7 @@ nobr {
 .item-box,
 .result-box {
     display: inline-block;
-    margin: 0 0 20px;
+    margin: 0 0 60px;
     width: 100%;
 }
 .item-box h4,
@@ -636,6 +638,8 @@ nobr {
 }
 .seat-tabs-box h1 {
     margin: 0 0 10px;
+    content: "test";
+    font-size: 48px;
 }
 .seat-tabs-box .seat-tabs {
     display: block;
@@ -757,6 +761,7 @@ nobr {
 }
 #screen_flip_section .item-box-item-details select {
     width: auto;
+    border-radius: 0px !important;
 }
 .map_legend_li div#unavailable {
     opacity: 0.3;
@@ -826,9 +831,9 @@ nobr {
 /* =Promo Code Box
 -------------------------------------------------------------- */
 
-.promotional-code-input {	
+.promotional-code-input {
     display: inline-block;
-    margin: 0 0 20px;
+    margin: 0 0 60px;
     width: 100%;
 }
 .promotional-code-input ul {
